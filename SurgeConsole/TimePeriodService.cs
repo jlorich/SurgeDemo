@@ -13,12 +13,10 @@ namespace SurgeConsole
 
             var timePeriods = new List<TimePeriod>();
 
-            if (startDate >= endDate)
+            if (startDate < endDate)
             {
-                return timePeriods;
+                PopulateTimePeriods(timePeriods, startDate, endDate, period);
             }
-
-            PopulateTimePeriods(timePeriods, startDate, endDate, period);
 
             return timePeriods;
         }

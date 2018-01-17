@@ -62,16 +62,6 @@ namespace SurgeConsole
                 }
             }
 
-            // Could use an aggregator here for less line count but that's a bit more confusing
-            // var mostPopular = ancestors.Aggregate("", (popular, currentPerson) =>
-            // {
-            //     var flavor = currentPerson.FavoriteIceCreamFlavor;
-
-            //     popularIceCream.TryGetValue(flavor, out int count);
-            //     popularIceCream[currentPerson.FavoriteIceCreamFlavor] = count + 1;
-            //     return popular != "" && popularIceCream[popular] > count + 1 ? popular : flavor;
-            // });
-
             return mostPopular;
         }
     }
