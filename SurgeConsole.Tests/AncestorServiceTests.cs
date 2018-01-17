@@ -5,9 +5,8 @@ using System.Linq;
 
 namespace SurgeConsole.Tests
 {
-    public class AncestorsTests
+    public class AncestorServiceTests
     {
-
         private Person BuildPersonWithFamily() {
             var grandma = new Person {
               Name = "leona",
@@ -44,9 +43,10 @@ namespace SurgeConsole.Tests
         [Fact]
         public void TestGetAncestorNames()
         {
+            var service = new AncestorService();
             var person = BuildPersonWithFamily();
 
-            var ancestorNames = Ancestors.GetAncestorNames(person);
+            var ancestorNames = service.GetAncestorNames(person);
             
             
             Assert.Equal(4, ancestorNames.Count());
@@ -61,13 +61,12 @@ namespace SurgeConsole.Tests
         [Fact]
         public void TestGetMostPopularIceCreamInfamily()
         {
+            var service = new AncestorService();
             var person = BuildPersonWithFamily();
 
-            var iceCream = Ancestors.GetMostPopularIceCreamInfamily(person);
-            
+            var iceCream = service.GetMostPopularIceCreamInfamily(person);
             
             Assert.Equal("chocolate", iceCream);
-            
         }
     }
 }

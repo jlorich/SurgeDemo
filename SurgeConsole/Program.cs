@@ -8,7 +8,7 @@ namespace SurgeConsole
     {
         static void Main(string[] args)
         {
-
+            // Nothing to do here, everything is run in through tests.  This was just a playground for running code
         }
     }
 }
