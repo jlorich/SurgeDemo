@@ -1,0 +1,29 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "taskName": "build",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/SurgeConsole/SurgeConsole.csproj"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "test",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "test",
+                "${workspaceFolder}/SurgeConsole.Tests/SurgeConsole.Tests.csproj"
+            ],
+            "group": "test",
+            "presentation": {
+              "reveal": "always",
+              "panel": "new"
+          }
+        }
+    ]
+}
